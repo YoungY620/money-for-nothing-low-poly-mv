@@ -4,7 +4,7 @@ pages:
   script:
     - node --version
     - npm --version
-    - docker manifest inspect "$CI_NODE_IMAGE" || true
+    - docker buildx imagetools inspect "$CI_NODE_IMAGE" || true
     - npm ci
     - npm run build
     - rm -rf public && mv dist public
