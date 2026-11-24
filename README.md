@@ -24,7 +24,7 @@ npm run build
 npm run preview
 ```
 
-The production site is generated in `dist/`. GitLab CI deploys the internal Pages site. The previous GitHub Actions workflow remains temporarily as a rollback path during migration.
+The production site is generated in `dist/`. GitLab CI deploys the internal Pages site.
 
 ## Controls
 

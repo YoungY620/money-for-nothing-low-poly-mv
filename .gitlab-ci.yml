@@ -2,9 +2,6 @@ pages:
   stage: deploy
   image: $CI_NODE_IMAGE
   script:
-    - node --version
-    - npm --version
-    - docker pull --quiet "$CI_NODE_IMAGE" && docker image inspect --format '{{json .RepoDigests}}' "$CI_NODE_IMAGE" || true
     - npm ci
     - npm run build
     - rm -rf public && mv dist public
